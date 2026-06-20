@@ -9,6 +9,6 @@ package day3.discussion;
  *
  * @author Labicane
  */
-public class java {
+public class NewClass {
     
 }
