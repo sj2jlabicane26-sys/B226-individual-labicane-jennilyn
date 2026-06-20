@@ -1,5 +1,5 @@
 
-package day3.discussion;
+package day2.discussion;
 
 public class SampleCode { // class
    
