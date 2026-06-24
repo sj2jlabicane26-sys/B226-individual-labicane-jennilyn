@@ -1,8 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
+
 package day6.discussion;
 
 public class LogicalOperator {
@@ -18,7 +15,7 @@ public class LogicalOperator {
        
       //(&&) May ticket -> pwede kang pumasok sa sinehan
         System.out.println("Allowed to enter cinema:" + (hasTicket && hasVaccinationCard));
-        //System.out.println("Allowed to enter cinema:" + (hasTicket & hasVaccinationCard | isLoggedIn ));
+       // System.out.println("Allowed to enter cinema:" + (hasTicket & hasVaccinationCard | isLoggedIn ));
       
       // (||) May ticket (student || senior citizen) -> Discounted
         System.out.println("Eligible for discount:" + (isStudent || isSeniorCitizen));
