@@ -17,12 +17,12 @@ public class Activity2_Labicane {
         double totalExpenses = foodAllowance + transportation + rent + utilityBill;
         double Remaining = income - totalExpenses;
         
-         System.out.printf("income:" + "%.0f",income);
-         System.out.printf("foodAllowance:" + " " + "%.1f%%%n",foodPercentage);
-         System.out.printf("transportation" + " " + "%.1f%%%n",transPercentage); 
+         System.out.printf("income:" + "%.0f\n",income);
+         System.out.printf("foodAllowance:" + " " + "%.1f%%\n",foodPercentage);
+         System.out.printf("transportation" + " " + "%.1f%%\n",transPercentage); 
          System.out.printf("rent" + " " + "%.1f%%%n",rentPercentage);  
-         System.out.printf("utilityBill" + " " + "%.1f%%%n",utilitybillPercentage);
-         System.out.printf("total:" + " " + "%.0f", totalExpenses);
+         System.out.printf("utilityBill" + " " + "%.1f%%\n",utilitybillPercentage);
+         System.out.printf("total:" + " " + "%.0f\n", totalExpenses);
          System.out.printf("RemainingBalance:" + " " + "%.0f",Remaining);
        
         

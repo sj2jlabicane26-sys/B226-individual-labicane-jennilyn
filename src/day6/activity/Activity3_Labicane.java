@@ -32,7 +32,7 @@ public class Activity3_Labicane {
             int score = 85;
           
             
-            String result = score > 74 ? "Passed" : "Failed";
+            String result = score >= 75 ? "Passed" : "Failed";
             System.out.println(result);
 
         //Condition:  
@@ -51,4 +51,4 @@ public class Activity3_Labicane {
     }
     
     
-}
+} 
