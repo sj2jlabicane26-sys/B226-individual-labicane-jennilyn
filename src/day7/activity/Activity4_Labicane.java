@@ -16,7 +16,7 @@ public class Activity4_Labicane {
         System.out.println("2. Load Game");
         System.out.println("3. Setting");
         System.out.println("4. Exit");
-        System.out.println("Enter Your Choice (1-4):");
+        System.out.print("Enter Your Choice (1-4):");
         int choice = input.nextInt();
         
         if (choice == 1) {System.out.println("You selected Option 1: Start Game");}
@@ -24,9 +24,10 @@ public class Activity4_Labicane {
         else if (choice == 3) {System.out.println("You selected Option 3: Settings");}
         else if (choice == 4) {System.out.println("You selected Option 4: Exit");}
         else {System.out.println("In Valid Choice. Please try again");}
+        
+        
+        
         }
         
-        
-
     }
 
