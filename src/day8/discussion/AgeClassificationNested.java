@@ -26,41 +26,42 @@ public class AgeClassificationNested {
         // Nested use for Validation
 
         if (age >= 0 && age <= 120) {
-
-            if (age <= 12) { // 0 - 12
-                System.out.println("You are a child"); // inner if block
-                if (age <= 5) { // toddler
-                    System.out.println("Specifically, you are Toddler");
-                } else {
-                    System.out.println("Specifically, you are a Pre-Teen");
-                }
-            } else if (age <= 19) { // 13 - 19
-                System.out.println("You are teenager");
-                if (age <= 15) // Early Teen
-                {
-                    System.out.println("Specifically, you are Early Teen");
-                } else {
-                    System.out.println(" Specifically, you are Late Teen");
-                }
-            } else if (age <= 59) { // 20 - 59
-                System.out.println("You are adult");
-                if (age <= 35) { // Young Adult
-                    System.out.println("Specifically, you are Young adult");
-                } else {
-                    System.out.println("Specifically, you are Mid-dle Aged");
-                }
-            } else if (age <= 120) { // 60 - 120 
-                System.out.println("You are Senior citizen");
-                if (age <= 75) { // Young Senior
-                    System.out.println("Specifically, you are Young Senior");
-                }
-            } else {
-                System.out.println("Specifically, Elderly");
-            }
-
         } else {
             System.out.println("Invalid Age Entered");
         }
+        
+        if (age <= 12) { // 0 - 12
+            System.out.println("You are a child"); // inner if block
+            if (age <= 5) { // toddler
+                System.out.println("Specifically, you are Toddler");
+            } else {
+                System.out.println("Specifically, you are a Pre-Teen");
+            }
+        } else if (age <= 19) { // 13 - 19
+            System.out.println("You are teenager");
+            if (age <= 15) // Early Teen
+            {
+                System.out.println("Specifically, you are Early Teen");
+            } else {
+                System.out.println(" Specifically, you are Late Teen");
+            }
+        } else if (age <= 59) { // 20 - 59
+            System.out.println("You are adult");
+            if (age <= 35) { // Young Adult
+                System.out.println("Specifically, you are Young adult");
+            } else {
+                System.out.println("Specifically, you are Middle Aged");
+            }
+        } else if (age <= 120) { // 60 - 120 
+            System.out.println("You are Senior citizen");
+            if (age <= 75) { // Young Senior
+                System.out.println("Specifically, you are Young Senior");
+            } else {
+                System.out.println("Specifically, Elderly");
+            }
+        }
+    }
+}
 
 //        if (age <= 12) { // 0 - 12
 //            System.out.println("You are a child"); // inner if block
@@ -92,7 +93,6 @@ public class AgeClassificationNested {
 //        } else {
 //            System.out.println("Specifically, Elderly");
 //        }
-        // code minimization
-    }
+// code minimization
+//    }
 
-}
