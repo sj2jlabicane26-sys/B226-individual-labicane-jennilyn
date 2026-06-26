@@ -25,6 +25,19 @@ public class AgeClassification {
         } else { System.out.println("Invalid age entered");
     }
         input.close();
+        
+         // code minimization
+//        if (age <=12) { // 0 - 12
+//            System.out.println("You are a child"); 
+//        } else if(age <=19){ // 13 - 19
+//            System.out.println("You are teenager");
+//        }else if (age <= 59) { // 20 - 59
+//            System.out.println("You are adult");
+//        }else if (age <= 120){ // 60 - 120 
+//            System.out.println("You are senior citizen");
+//        } else { System.out.println("Invalid age entered");
+//    }
+        
        
         
     }
