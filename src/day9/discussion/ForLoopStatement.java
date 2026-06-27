@@ -21,11 +21,11 @@ public class ForLoopStatement {
           
            //check if the number is even
            // Print the first even numbers
-            for (int i = 1; i <= 10; i++){
-                if (i % 2 == 0){
-                    System.out.println(i);
-                }
-            }
+//            for (int i = 1; i <= 10; i++){
+//                if (i % 2 == 0){
+//                    System.out.println(i);
+//                }
+//            }
     }
     }
 }
@@ -41,6 +41,8 @@ public class ForLoopStatement {
 //            //1          2
 //             sum = sum + i;
     // 1 + 2 + 3 + 4 + 5 = 15
+//
+//
 //         }
 //         System.out.println(sum); // print sum
 //         int sum = 0;
