@@ -1,6 +1,6 @@
 package day9.activity;
 
-import java.util.Scanner;
+
 
 public class Activity5_Labicane {
     public static void main(String[] args) {
