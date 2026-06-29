@@ -18,8 +18,8 @@ public class Activity5_Labicane {
 
         int sum = 0;
         for (int i = 1; i <= 5; i++) {
-
-            sum += i;
+                                           // loops = 1 2 3 4  5 
+            sum = sum + i; // or sum += i; // sum   = 1 3 6 10 15 
             System.out.println("i = " + i + ", sum = " + sum);
         }
         System.out.println("Final Sum: " + sum);
@@ -37,7 +37,8 @@ public class Activity5_Labicane {
 //Final Product: 120
         int product = 1;
         for (int i = 1; i <= 5; i++) {
-            product *= i;
+            product = product * i; // or product *= i; // loops   = 1 2 3 4  5
+                                                       // product = 1 2 6 24 120
             System.out.println("i = " + i + ", product = " + product);
            }  System.out.println("Final Product: " + product);
 //           Activity 5.3 – Arithmetic Sequence (Sum Only)  
@@ -52,16 +53,12 @@ public class Activity5_Labicane {
         int n = 5;
 
         int sumOnly = 0;
-        
-//        Scanner input = new Scanner(System.in);
-//        System.out.println("Enter a number:");
-//        int num = input.nextInt();
-        
-        for (int i = 1; i <= 5; i++) {
-            System.out.print( startNumber + " ");
-            sumOnly += startNumber;
-            startNumber += commonDifference;
-        } System.out.println(" = " + sumOnly); 
+            
+        for (int i = 1; i <= n; i++) {
+            System.out.print( startNumber + " ");                          // loops   = 1 2 3  4  5
+            sumOnly = sumOnly + startNumber; // or sumOnly += startNumber; // sumOnly =1,7,18,34,55             loops   = 1 2  3  4  5
+            startNumber = startNumber + commonDifference; // or startNumber += commonDifference; //         startNumber = 6,11,16,21,26
+        } System.out.println(" = " + sumOnly);
 //Activity 5.4 – Arithmetic Sequence (Sum and Product)  
 //  👉 Objective: Combine both sum and product in the arithmetic sequence.
 //
@@ -74,9 +71,9 @@ public class Activity5_Labicane {
         int N = 10;
         int totalSum = 0;
         for (int i = 1; i <= N; i++) {
-            System.out.print(startNum + " ");
-            totalSum += startNum;
-            startNum += commonDif;
+            System.out.print(startNum + " ");                           // loops    = 1 2 3  4  5
+           totalSum = totalSum + startNum; // or totalSum += startNum   // totalSum = 1 7 18 34 55       // loops    = 1 2 3  4  5
+            startNum = startNum + commonDif; // or startNum += commonDif;                                // startNum =   6 11 16 21 26
             
         } System.out.println(" = " + totalSum);
 
@@ -87,8 +84,8 @@ public class Activity5_Labicane {
 
         for (long i = 1; i <= num; i++) {
             System.out.print(startN + " ");
-            totalProduct *= startN;
-            startN += commonD;
+            totalProduct = totalProduct * startN; // or totalProduct *= startN;
+            startN = startN + commonD; // or startN += commonD;
         }
         System.out.println(" = " + totalProduct);
 
