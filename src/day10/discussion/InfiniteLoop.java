@@ -5,10 +5,6 @@ import java.util.Scanner;
 public class InfiniteLoop {
 
     public static void main(String[] args) {
-
-       
- 
-
         // Program for ATM PIN Entry -> max attempts 3
         Scanner input = new Scanner(System.in);
 
