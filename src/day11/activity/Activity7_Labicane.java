@@ -44,11 +44,9 @@ Scanner input = new Scanner(System.in);
         double average = (double) sum / numbers.length; 
         
         //highest and lowest numbers
-        
         int highest = numbers[0];
         int lowest = numbers[0];
         
-        // Loop through the array to compare and update highest/lowest
         for (int i = 1; i < numbers.length; i++) {
             if (numbers[i] > highest) {
                 highest = numbers[i]; 
