@@ -35,7 +35,7 @@ public class InfiniteLoop {
         
         
         // After loop, check if access was granted
-        if (false) {
+        if (!accessGranted) {
             System.out.println("Too many failed attempts. Your account is locked");
         }
 
@@ -44,6 +44,8 @@ public class InfiniteLoop {
         // If the loop ends, it means the PIN is correct
         //System.out.println("Access Granted!");
 
+        
+        
             // syntax of while loop
 ////        int counter = 1;
 ////        while (true) {
