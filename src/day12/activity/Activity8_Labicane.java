@@ -58,7 +58,7 @@ public class Activity8_Labicane {
 
         System.out.printf("%-10s%n", "Average");
 
-        // Table Rows
+        
         for (int i = 0; i < student; i++) {
 
             System.out.printf("%-15s", studentNames[i]);
