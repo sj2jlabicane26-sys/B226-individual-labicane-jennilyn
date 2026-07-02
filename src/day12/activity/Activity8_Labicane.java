@@ -12,14 +12,14 @@ public class Activity8_Labicane {
         System.out.print("Enter the number of subject: ");
         int subject = input.nextInt();
 
-        input.nextLine();
+        input.nextLine();// clearing buffer
 
         String[] studentNames = new String[student];
         String[] subjectNames = new String[subject];
         double[][] grades = new double[student][subject];
         double[] average = new double[student];
 
-        System.out.println("");
+        System.out.println("");// space
 
         System.out.println("Enter subject Names: ");
         for (int i = 0; i < subject; i++) {
@@ -27,7 +27,7 @@ public class Activity8_Labicane {
             subjectNames[i] = input.nextLine();
 
         }
-        System.out.println("");
+        System.out.println("");// space
 
         for (int i = 0; i < student; i++) {
             System.out.print("Name of student " + (i + 1) + ": ");
