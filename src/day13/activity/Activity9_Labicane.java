@@ -28,10 +28,11 @@ public class Activity9_Labicane {
 //    A short description of what the method does.
 // method checks whether a specific sequence of characters exists within a given string.
 // It returns true if the sequence is found, and false if it is not.
-        
-        // Successful match
-        String fullName = "Jennilyn Labicane";
-        boolean name = fullName.contains("Jen"); 
+// Syntax: stringName.contains("text");
+
+        // Successful match                             
+        String fullName = "Jennilyn Labicane"; // 
+        boolean name = fullName.contains("Jen"); // boolean variableName = stringName.contains("substring");
         System.out.println(name); // Outputs: true
         
         
@@ -46,17 +47,17 @@ public class Activity9_Labicane {
 // method is a built-in function of the String class used to check
 // if a string ends with a specific suffix. It performs a character-by-character comparison
 // from the end of the string and returns a boolean value (true or false)  
-       
-        String lastName = "Jennilyn Labicane";
+// Syntax: stringName.endsWith("suffix");       
+        String lastName = "Jennilyn Labicane"; // 
          // Successful match
-        System.out.println(lastName.endsWith("Labicane")); //true
+        System.out.println(lastName.endsWith("Labicane")); //true  
         System.out.println(lastName.endsWith("cane")); // true /last-partial
         
         // Case-sensitivity check
         System.out.println(lastName.endsWith("labicane")); // false / lowercase
         System.out.println(lastName.endsWith("Labi")); // false /first-partial
   
-// 3. endsWith()
+// 3. startsWith()
 // public boolean startsWith(String prefix, int toffset)
 //    A short description of what the method does. 
 //the startsWith() method of the String class checks whether a string begins
@@ -65,6 +66,7 @@ public class Activity9_Labicane {
 // Case-Sensitivity: The method treats uppercase and lowercase letters differently
 // (e.g., "Jen" does not match "jen").
 // It looks for an exact literal character match.
+// Syntax: stringName.startsWith("prefix"); or boolean result = stringName.startsWith("prefix");
         
         String fullNam = "Jennilyn M. Labicane";
         
@@ -91,7 +93,9 @@ public class Activity9_Labicane {
 //of a specified character or substring within a string.                    
 //If the character or substring is not found, the method returns -1.
 //Spaces are treated as characters and have their own index positions.
-
+// Syntax: Find a character  stringName.indexOf('character'); 
+// Syntax: Find a substring  stringName.indexOf("substring");
+// int position = stringName.indexOf("substring");
 
                         //  0123456789 so on and so forth
              String fullN = "Jennilyn Labicane";
@@ -105,7 +109,7 @@ public class Activity9_Labicane {
         int index2 = fullN.indexOf('y', 2); 
         System.out.println(index2); // Outputs: 6 (skips letter before 2)
 
-        // 3. Find a substring
+        // 3. Find a substring /int position = stringName.indexOf("substring");
         int index3 = fullN.indexOf("Lab"); 
         System.out.println(index3); // Outputs: 9
 
@@ -115,8 +119,8 @@ public class Activity9_Labicane {
     
 // 5.isEmpty()
 //    A short description of what the method does.
-//For strings, isEmpty() evaluates to true only 
-//if the text length equals 0 (e.g., "")
+//For strings, isEmpty() evaluates to true only if the text length equals 0 (e.g., "")
+// Syntax / stringName.isEmpty();
         
         String emptyText = "";
         String spaceText = "   ";
@@ -129,7 +133,7 @@ public class Activity9_Labicane {
 // 6. trim()
 //    A short description of what the method does. 
 // removes all leading and trailing whitespace characters from a string       
-        
+// Syntax / stringName.trim();  or String newString = stringName.trim();    
         String original = "   Jennilyn Labicane   ";
         String trimmed = original.trim();
 
@@ -144,6 +148,8 @@ public class Activity9_Labicane {
 //replaces every occurrence of a specific character or  
 //substring in a string with a new character or substring
 //returns a brand-new string with the updates applied
+// Syntax / Replace a character: stringName.replace('oldChar', 'newChar');
+// Syntax / Replace a substring: stringName.replace("oldText", "newText");
         
         String nicknam = "Gelyn";
         // 1. Replacing Characters /Replace 'G' character with 'J'
@@ -161,9 +167,10 @@ public class Activity9_Labicane {
         System.out.println(outcome); 
         // Output: I'm Gelyn Labicane
         
-// 8. r / public char[] toCharArray()
+// 8.toCharArray()
 //    A short description of what the method does.
 // used to convert a string into a newly allocated character array (char[])
+// Syntax: char[] arrayName = stringName.toCharArray();
 
           String Nam = "Jennilyn";
         
@@ -180,7 +187,7 @@ public class Activity9_Labicane {
 // chaining scanner.nextLine().charAt(0) is used to read a single character
 // from the user input by grabbing an entire line of text
 // as a string and extracting the very first character
-
+// Syntax : char variableName = scannerName.nextLine().charAt(0);
          Scanner scanner = new Scanner(System.in);
         
         System.out.print("Enter a word or character: ");
@@ -192,7 +199,7 @@ public class Activity9_Labicane {
         
 // 10.valueOf()
 // valueOf() is a static utility method used for data type conversion
-        
+// Syntax : String variableName = String.valueOf(value);       
         //Syntax / String.valueOf(value)
        
         // example 1
