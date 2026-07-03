@@ -23,7 +23,7 @@ public class Activity9_Labicane {
 //A simple code example that demonstrates its use.
 
 
-// 1.contains 
+// 1.contains d
 // public boolean contains(CharSequence sequence)
 //    A short description of what the method does.
 // method checks whether a specific sequence of characters exists within a given string.
@@ -41,7 +41,7 @@ public class Activity9_Labicane {
         boolean nick = nickName.contains("Jen"); 
         System.out.println(nick); // Outputs: false
         
-// 2. endsWith()
+// 2. endsWith()d
 //public boolean endsWith(String suffix)
 //    A short description of what the method does.    
 // method is a built-in function of the String class used to check
@@ -57,7 +57,7 @@ public class Activity9_Labicane {
         System.out.println(lastName.endsWith("labicane")); // false / lowercase
         System.out.println(lastName.endsWith("Labi")); // false /first-partial
   
-// 3. startsWith()
+// 3. startsWith() d
 // public boolean startsWith(String prefix, int toffset)
 //    A short description of what the method does. 
 //the startsWith() method of the String class checks whether a string begins
@@ -87,7 +87,7 @@ public class Activity9_Labicane {
         System.out.println("Starts with 'Labicane' at index 12: " + checkOffset1);
         System.out.println("Starts with 'M' at index 9: " + checkOffset2);
      
-// 4. indexOf()
+// 4. indexOf()d
 //    A short description of what the method does.
 //The indexOf() method in Java returns the 0-indexed position of the first occurrence
 //of a specified character or substring within a string.                    
@@ -117,10 +117,12 @@ public class Activity9_Labicane {
         int index4 = fullN.indexOf("M"); 
         System.out.println(index4); // Outputs: -1
     
-// 5.isEmpty()
+// 5.isEmpty() d
 //    A short description of what the method does.
 //For strings, isEmpty() evaluates to true only if the text length equals 0 (e.g., "")
 // Syntax / stringName.isEmpty();
+// Boolean
+// length is 0
         
         String emptyText = "";
         String spaceText = "   ";
