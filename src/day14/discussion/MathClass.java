@@ -119,7 +119,7 @@ public class MathClass {
         System.out.println(Math.ceil(7.7));   // Outputs: 8.0
         System.out.println(Math.ceil(7.0));   // Outputs: 7.0 (No decimal fraction)
         System.out.println(Math.ceil(-7.9));  // outputs: -7 /Moves right on the number line toward positive infinity /(closer to zero)
-        
+
         //example 2
         // Manual casting to save the result as an integer
         int celingWholeNumber = (int) Math.ceil(12.02);
@@ -128,7 +128,6 @@ public class MathClass {
 //8. Math.floor() → round down (floor)
 // class that rounds a floating-point number down to the nearest mathematical integer.
 //"Floor" means it pushes the value toward negative infinity.
-
         System.out.println(Math.floor(5.9));   // Outputs: 7.0
         System.out.println(Math.floor(5.1));   // Outputs: 7.0
         System.out.println(Math.floor(5.0));   // Outputs: 7.0
@@ -138,30 +137,85 @@ public class MathClass {
         int lowerWholeNumber = (int) Math.floor(12.85);
         System.out.println(lowerWholeNumber);  // Outputs: 12
 
-
 //9. Math.random() → random number between 0.0 and 1.0
 //  class used to generate a pseudo-random floating-point number.
 //The number returned is always within a specific mathematical range: [0.0, 1.0)
 //It is inclusive of 0.0 (it can return exactly 0.0).
 //It is exclusive of 1.0 (it will get incredibly close, like 0.999999..., but it will never return exactly 1.0).
-        
-        //example 1
+        // example 1
         // Generate a random double between 0.0 and 0.9999...
         double randomValue = Math.random();
-        System.out.println("Random double: " + randomValue); 
+        System.out.println("Random double: " + randomValue);
         // Example output: Random double: 0.7594303434 // it gives random numbers
 
-       // Simulated 6-sided die outcome tracker (shifting for 1-6 range below)
-// If limit is 6, outputs can be: 0, 1, 2, 3, 4, or 5
-int zeroToFive = (int) (Math.random() * 6); 
+        // example 2
+        //  (shifting for 1-6 range below)
+        // If limit is 6, outputs can be: 0, 1, 2, 3, 4, or 5
+        int zeroToFive = (int) (Math.random() * 6);
         System.out.println(zeroToFive);
 
 //10. Math.log() → natural logarithm (base e)
-//Math.log10() → logarithm base 10
-//Math.exp() → exponential function (e^x)
-//Math.sin() → sine of an angle (in radians)
-//Math.cos() → cosine of an angle (in radians)
-//Math.tan() → tangent of an angle (in radians)
+// class used to calculate the natural logarithm (logarithm base e) of a given number
+        double value = 10.0;
+
+        // 1. Find the natural log exponent
+        double exponent = Math.log(value); // Returns: 2.302585092994046
+
+        // 2. Reverse it: e^2.302585092994046
+        double reverse = Math.exp(exponent);
+
+        System.out.println("Reversed: " + reverse); // Outputs: 10.0
+
+//11. Math.log10() → logarithm base 10
+//class used to calculate the common logarithm (logarithm base 10) of a given number
+// answers the question: "To what power must we raise 10 to get this number?"
+        System.out.println(Math.log10(10));      // Outputs: 1.0 (10^1 = 10) 
+        // 10 ... The number that will be multiplied by itself. 
+        //1... The number that tells you how many times to use the base in the multiplication.
+        System.out.println(Math.log10(1000));    // Outputs: 3.0 (10^3 = 1000)
+        System.out.println(Math.log10(0.1));     // Outputs: -1.0 (10^-1 = 0.1)
+
+//12. Math.exp() → exponential function (e^x)
+// Class that calculates the exponential function. It raises Euler's number (e approx 2.71828)
+//to the power of a specified exponent (e^x)
+        // e^0 = 1.0
+        System.out.println(Math.exp(0)); // Outputs: 1.0
+
+        // e^1 = ~2.71828
+        System.out.println(Math.exp(1)); // Outputs: 2.718281828459045
+
+        // Reversing your previous natural log example: e^2.302585092994046
+        System.out.println(Math.exp(2.302585092994046)); // Outputs: 10.0
+
+//13. Math.sin() → sine of an angle (in radians)
+//It calculates the vertical height of an angle. The output always stays between -1.0 and 1.0
+// Java does not understand degrees (like 90degree). 
+//You must convert degrees to radians using Math.toRadians() first.
+        double degre = 90;
+        double radians = Math.toRadians(degre); // Converts 90° to radians
+
+        double outcome = Math.sin(radians);
+        System.out.println("sin:" + outcome); // Outputs: 1.0
+
+//14. Math.cos() → cosine of an angle (in radians)
+// It calculates the horizontal width of an angle . Just like sine, the output always stays between -1.0 and 1.0 [java].
+// does not understand degrees (like 180 degree) . You must convert degrees to radians using Math.toRadians() first.
+        double degree = 180.0;
+        double radian = Math.toRadians(degree); // Converts 180° to radians
+
+        double outcomes = Math.cos(radian);
+        System.out.println("cos:" + outcomes); // Outputs: -1.0
+
+//15. Math.tan() → tangent of an angle (in radians)
+// class that calculates the trigonometric tangent of an angle [java]
+// Mathematically, tangent is the ratio of sine over cosine
+//Unlike sine and cosine, the output of Math.tan() is not limited to the -1.0 to 1.0 range;
+//it can return any number from negative infinity to positive infinity.
+        double degr = 45.0;
+        double radia = Math.toRadians(degr); // Converts 45° to radians
+
+        double outcom = Math.tan(radia);
+        System.out.println(outcome); // Outputs: 1.0 (since sin(45) / cos(45) = 1)
     }
 
 }
