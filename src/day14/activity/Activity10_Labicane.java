@@ -10,7 +10,7 @@ public class Activity10_Labicane {
 //returns the absolute value of a number.
 // the output is always positive or zero, negative numbers become positive, 
 //while positive numbers remain unchanged.
-// is overloaded to accept four different numeric primitive types.
+// is overloaded to accept four different numeric primitive types. int , long , float and double
         // Integer example
         int negativeInt = -26;
         int resultInt = Math.abs(negativeInt);
@@ -21,14 +21,15 @@ public class Activity10_Labicane {
         double resultDouble = Math.abs(negativeDouble);
         System.out.println("Absolute double: " + resultDouble); // Outputs: 17.11
 
-        // Distance between two variables
-        int positionA = 11;
-        int positionB = 17;
-        int distance = Math.abs(positionA - positionB);
-        System.out.println("Distance: " + distance); // Outputs: 6
+//        // Distance between two variables
+//        int positionA = 11;
+//        int positionB = 17;
+//        int distance = Math.abs(positionA - positionB);
+//        System.out.println("Distance: " + distance); // Outputs: 6
 
 //2. Math.max() → maximum of two values
-        //class that compares two numeric arguments and returns the larger of the two.
+//class that compares two numeric arguments and returns the larger of the two.
+// is overloaded to accept four different numeric primitive types. int , long , float and double
         //example 1
         int x = 11;
         int y = 17;
@@ -48,6 +49,7 @@ public class Activity10_Labicane {
 
 //3. Math.min() → minimum of two values
 // class that compares two numeric arguments and returns the smaller of the two.
+// is overloaded to accept four different numeric primitive types. int , long , float and double
         // example 1
         int num = 17;
         int num2 = 11;
@@ -56,10 +58,10 @@ public class Activity10_Labicane {
         System.out.println("The maximum is: " + lowest); // Outputs: 11
 
         // example 2
-        double[] temperatures = {37, 38.8, 39.8, 35.5};
-        double minTemp = temperatures[0]; // Start with the first element
+        float[] temperatures = {37.1f, 38.8f, 39.8f, 35.5f};
+        float minTemp = temperatures[0]; // Start with the first element
 
-        for (double temp : temperatures) {
+        for (float temp : temperatures) {
             minTemp = Math.min(minTemp, temp);
         }
 
@@ -68,6 +70,7 @@ public class Activity10_Labicane {
 //4. Math.pow() → power (exponentiation)
 //class used to raise a base number to the power of an exponent (exponentiation).
 //it takes and returns double types, any integers passed into it are automatically cast to double
+
         // Calculates 2 raised to the power of 3 (2^3)
         double result = Math.pow(2, 3);
         System.out.println("2^3 = " + result); // Outputs: 8.0
@@ -118,7 +121,7 @@ public class Activity10_Labicane {
         System.out.println(Math.ceil(7.2));   // Outputs: 8.0
         System.out.println(Math.ceil(7.7));   // Outputs: 8.0
         System.out.println(Math.ceil(7.0));   // Outputs: 7.0 (No decimal fraction)
-        System.out.println(Math.ceil(-7.9));  // outputs: -7 /Moves right on the number line toward positive infinity /(closer to zero)
+        System.out.println(Math.ceil(-7.9));  // outputs: -7.0 /Moves right on the number line toward positive infinity /(closer to zero)
 
         //example 2
         // Manual casting to save the result as an integer
@@ -173,7 +176,7 @@ public class Activity10_Labicane {
         // 10 ... The number that will be multiplied by itself. 
         //1... The number that tells you how many times to use the base in the multiplication.
         System.out.println(Math.log10(1000));    // Outputs: 3.0 (10^3 = 1000)
-        System.out.println(Math.log10(0.1));     // Outputs: -1.0 (10^-1 = 0.1)
+       
 
 //12. Math.exp() → exponential function (e^x)
 // Class that calculates the exponential function. It raises Euler's number (e approx 2.71828)
