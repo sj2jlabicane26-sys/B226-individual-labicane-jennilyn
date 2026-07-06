@@ -9,7 +9,7 @@ public class Activity11_Labicane {
 //        int randomNumber =(int) (Math.random() * 58) + 1;
 //        System.out.println("[" + (i + 1) + "]: " + randomNumber);
 
-            System.out.println("Lotto Simulator");
+            System.out.println("Lotto Numbers");
             int[] lottoNumbers = new int [6];
             int count = 0;
             
