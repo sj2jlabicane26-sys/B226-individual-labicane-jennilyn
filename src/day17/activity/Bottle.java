@@ -7,7 +7,7 @@ public class Bottle {
     String brand;
     String color;
     String type;
-    double capacity;
+    int capacity;
     double weightInGrams;
     
     // Purpose / method
