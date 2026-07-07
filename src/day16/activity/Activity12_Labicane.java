@@ -60,9 +60,9 @@ public class Activity12_Labicane {
     }
 
     public static void printName(String name) {
-//        for (int i = 0; i < 50; i++) {
-//            System.out.println(name);
-//        }
+        for (int i = 0; i < 50; i++) {
+            System.out.println("[" + (i+1) + "]:"  + name);
+        }
     }
 
     public static void squareRoot(double num) {
