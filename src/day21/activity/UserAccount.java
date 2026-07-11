@@ -2,6 +2,8 @@ package day21.activity;
 
 public class UserAccount {
 
+    
+            
     private String firstName;
     private String middleName;
     private String lastName;
@@ -36,17 +38,21 @@ public class UserAccount {
 
     // Validation
     public void setEmail(String email) {
-        if (email.equals("labicane@gmail.com")) {
+        email = email.trim();
+        if (email.matches("^[A-Za-z0-9._%+-]+@gmail\\.com$")) {
             this.email = email;
         } else {
             this.email = "Invalid Email";
         }
     }
 
-    public void setPassword(String setpassword) {
-        if (email.equals("jen123")) {
+    public void setPassword(String password) {
+        boolean valid = password.length() >= 5 && password.matches(".*[A-Z].*") 
+                && password.matches(".*[a-z].*") 
+                && password.matches(".*\\d.*");
+        if(valid){
             this.password = password;
-        }else {
+        } else {
             this.password = "Invalid Password";
         }
     }

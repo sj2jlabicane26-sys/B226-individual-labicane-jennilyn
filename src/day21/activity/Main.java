@@ -6,38 +6,36 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+        
+        System.out.println("********************************");
+        System.out.println("*  USER ACCOUNT REGISTRATION   *");
+        System.out.println("********************************");
 
-        System.out.println("First Name: ");
+        System.out.print("First Name: ");
         String firstName = input.nextLine();
 
-        System.out.println("Middle Name: ");
+        System.out.print("Middle Name: ");
         String middleName = input.nextLine();
 
-        System.out.println("last Name: ");
+        System.out.print("last Name: ");
         String lastName = input.nextLine();
 
-        System.out.println("Address: ");
+        System.out.print("Address: ");
         String address = input.nextLine();
 
-        System.out.println("Email: ");
+        System.out.print("Email: ");
         String email = input.nextLine();
 
-        System.out.println("password: ");
+        System.out.print("password: ");
         String password = input.nextLine();
-        
-        
-        UserAccount user = new UserAccount("Jennilyn", "Melida", "Labicane",
-                "block 29 Lot 100 Mapagmahal", "labicanejennilyn@gmail.com", "jen123");
 
-          System.out.println("\n===== USER ACCOUNT INFORMATION =====");
-        System.out.println("Full Name: " +
-                user.getFirstName() + " " +
-                user.getMiddleName() + " " +
-                user.getLastName());
+        UserAccount useraccount = new UserAccount(firstName, middleName, lastName, address, email, password);
 
-        System.out.println("Email: " + user.getEmail());
-        System.out.println("Address: " + user.getAddress());
-        System.out.println("Password: " + user.getPassword());
-    }
+       
+        System.out.println("--- User Account Created");
+        System.out.println("FULL NAME: " + useraccount.getFirstName() + " " + useraccount.getMiddleName() + " " +useraccount.getLastName());
+        System.out.println("Address: " + useraccount.getAddress());
+        System.out.println("Email: " + useraccount.getEmail());
+    }   
 
 }
