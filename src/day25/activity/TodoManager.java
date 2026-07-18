@@ -7,128 +7,105 @@ public class TodoManager {
 
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
+          Scanner scanner = new Scanner(System.in);
         ArrayList<String> tasks = new ArrayList<>();
-
-        boolean running = true;
 
         System.out.println("Welcome to the To-Do List Manager!");
 
-        // Loop until the user chooses to exit (Option 6)
-        while (running) {
-            // Display the Menu
+        while (true) {
+
             System.out.println("\n--- TO-DO LIST MENU ---");
-            System.out.println("1. Add a task");
-            System.out.println("2. View all tasks");
-            System.out.println("3. Update a task");
-            System.out.println("4. Remove a task");
-            System.out.println("5. Clear all tasks");
+            System.out.println("1. Add a Task");
+            System.out.println("2. View All Tasks");
+            System.out.println("3. Update a Task");
+            System.out.println("4. Remove a Task");
+            System.out.println("5. Clear All Tasks");
             System.out.println("6. Exit");
-            System.out.print("Enter your choice (1-6): ");
+            System.out.print("Enter your choice: ");
 
-            int choice = -1;
-            if (scanner.hasNextInt()) {
-                choice = scanner.nextInt();
-                scanner.nextLine(); // Consume the leftover newline character
-            } else {
-                System.out.println("Invalid input. Please enter a number between 1 and 6.");
-                scanner.nextLine(); // Clear the invalid input
-                continue;
-            }
+            int choice = scanner.nextInt();
+            scanner.nextLine(); // Consume newline
 
-            // Handle user choices using a switch statement
             switch (choice) {
+
                 case 1:
-                    // Add a task
-                    System.out.print("Enter the task to add: ");
-                    String newTask = scanner.nextLine();
-                    tasks.add(newTask);
-                    System.out.println("Task added successfully!");
+                    System.out.print("Enter a task: ");
+                    String task = scanner.nextLine();
+                    tasks.add(task);
+                    System.out.println("Task added successfully.");
                     break;
 
                 case 2:
-                    // View all tasks
                     if (tasks.isEmpty()) {
-                        System.out.println("Your to-do list is currently empty.");
+                        System.out.println("No tasks found.");
                     } else {
                         System.out.println("\nYour Tasks:");
                         for (int i = 0; i < tasks.size(); i++) {
-                            // Displaying 1-based index for user-friendliness
                             System.out.println((i + 1) + ". " + tasks.get(i));
                         }
                     }
                     break;
 
                 case 3:
-                    // Update a task
                     if (tasks.isEmpty()) {
-                        System.out.println("There are no tasks to update.");
+                        System.out.println("No tasks to update.");
                     } else {
-                        System.out.print("Enter the number of the task you want to update: ");
-                        if (scanner.hasNextInt()) {
-                            int updateIndex = scanner.nextInt() - 1; // Convert to 0-based index
-                            scanner.nextLine(); // Consume newline
+                        System.out.println("\nYour Tasks:");
+                        for (int i = 0; i < tasks.size(); i++) {
+                            System.out.println((i + 1) + ". " + tasks.get(i));
+                        }
 
-                            if (updateIndex >= 0 && updateIndex < tasks.size()) {
-                                System.out.print("Enter the new description: ");
-                                String updatedTask = scanner.nextLine();
-                                tasks.set(updateIndex, updatedTask);
-                                System.out.println("Task updated successfully!");
-                            } else {
-                                System.out.println("Error: Invalid task number.");
-                            }
+                        System.out.print("Enter task number to update: ");
+                        int index = scanner.nextInt();
+                        scanner.nextLine();
+
+                        if (index >= 1 && index <= tasks.size()) {
+                            System.out.print("Enter new task: ");
+                            String newTask = scanner.nextLine();
+                            tasks.set(index - 1, newTask);
+                            System.out.println("Task updated successfully.");
                         } else {
-                            System.out.println("Error: Please enter a valid number.");
-                            scanner.nextLine(); // Clear scanner buffer
+                            System.out.println("Invalid task number.");
                         }
                     }
                     break;
 
                 case 4:
-                    // Remove a task
                     if (tasks.isEmpty()) {
-                        System.out.println("There are no tasks to remove.");
+                        System.out.println("No tasks to remove.");
                     } else {
-                        System.out.print("Enter the number of the task to remove: ");
-                        if (scanner.hasNextInt()) {
-                            int removeIndex = scanner.nextInt() - 1; // Convert to 0-based index
-                            scanner.nextLine(); // Consume newline
+                        System.out.println("\nYour Tasks:");
+                        for (int i = 0; i < tasks.size(); i++) {
+                            System.out.println((i + 1) + ". " + tasks.get(i));
+                        }
 
-                            if (removeIndex >= 0 && removeIndex < tasks.size()) {
-                                String removed = tasks.remove(removeIndex);
-                                System.out.println("Removed: \"" + removed + "\"");
-                            } else {
-                                System.out.println("Error: Invalid task number.");
-                            }
+                        System.out.print("Enter task number to remove: ");
+                        int remove = scanner.nextInt();
+
+                        if (remove >= 1 && remove <= tasks.size()) {
+                            tasks.remove(remove - 1);
+                            System.out.println("Task removed successfully.");
                         } else {
-                            System.out.println("Error: Please enter a valid number.");
-                            scanner.nextLine(); // Clear scanner buffer
+                            System.out.println("Invalid task number.");
                         }
                     }
                     break;
 
                 case 5:
-                    // Clear all tasks
-                    if (tasks.isEmpty()) {
-                        System.out.println("The list is already empty.");
-                    } else {
-                        tasks.clear();
-                        System.out.println("All tasks cleared successfully!");
-                    }
+                    tasks.clear();
+                    System.out.println("All tasks have been cleared.");
                     break;
 
                 case 6:
-                    // Exit the program
-                    System.out.println("Exiting To-Do List Manager. Goodbye!");
-                    running = false;
-                    break;
+                    System.out.println("Thank you for using the To-Do List Manager!");
+                    scanner.close();
+                    return; // Ends the program
 
                 default:
-                    System.out.println("Invalid choice. Please select an option between 1 and 6.");
-                    break;
+                    System.out.println("Invalid choice. Please try again.");
             }
-        }
 
     }
 
 }
+    }
