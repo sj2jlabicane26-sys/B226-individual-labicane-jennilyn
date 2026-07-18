@@ -7,7 +7,7 @@ public class TodoManager {
 
     public static void main(String[] args) {
 
-          Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         ArrayList<String> tasks = new ArrayList<>();
 
         System.out.println("Welcome to the To-Do List Manager!");
@@ -105,7 +105,7 @@ public class TodoManager {
                     System.out.println("Invalid choice. Please try again.");
             }
 
-    }
+        }
 
-}
     }
+}
